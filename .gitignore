@@ -1,0 +1,16 @@
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# Chroma database
+career_coach_chroma_db/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
