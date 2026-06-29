@@ -31,12 +31,80 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.markdown('<div class="main-title">🎯 AI Career Coach using Traditional RAG</div>', unsafe_allow_html=True)
-st.markdown(
-    '<div class="subtitle">Resume + Job Description → RAG Pipeline → Skill Gap Analysis, Resume Suggestions & Interview Prep</div>',
-    unsafe_allow_html=True,
-)
+st.markdown("""
+<style>
 
+.hero{
+    background:#1b2233;
+    border-radius:20px;
+    padding:35px;
+    margin-bottom:30px;
+    border:1px solid #303b55;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+.hero h1{
+    color:white;
+    font-size:48px;
+    margin:0;
+    font-weight:800;
+}
+
+.hero p{
+    color:#b7c0d4;
+    font-size:18px;
+    margin-top:12px;
+    margin-bottom:25px;
+    line-height:1.7;
+}
+
+.badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.badge{
+    background:#263149;
+    color:#8fd8ff;
+    border:1px solid #3f5377;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:600;
+}
+
+</style>
+
+<div class="hero">
+
+<h1>🎯 AI Career Coach & Job Application Assistant</h1>
+
+<p>
+Upload your resume and job description to receive an ATS compatibility score,
+identify skill gaps, get resume improvement suggestions, recommended projects,
+and interview preparation powered by Traditional RAG.
+</p>
+
+<div class="badges">
+
+<div class="badge">📄 Resume Analysis</div>
+
+<div class="badge">📊 ATS Score</div>
+
+<div class="badge">🎯 Skill Gap Analysis</div>
+
+<div class="badge">💼 JD Matching</div>
+
+<div class="badge">🚀 Project Suggestions</div>
+
+<div class="badge">🎤 Interview Questions</div>
+
+</div>
+
+</div>
+
+""", unsafe_allow_html=True)
 with st.sidebar:
     st.header("⚙️ RAG Settings")
     chunk_size = st.slider("Chunk size", 300, 1500, 800, 100)
