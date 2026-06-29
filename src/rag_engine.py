@@ -1,6 +1,6 @@
 import os
-import shutil
-from pathlib import Path
+#import shutil
+#from pathlib import Path
 from typing import List, Tuple
 from dotenv import load_dotenv
 from langchain_core.documents import Document
@@ -13,7 +13,7 @@ from langchain_chroma import Chroma
 
 load_dotenv()
 
-DB_dir="career_coach_chroma_db"
+#DB_dir="career_coach_chroma_db"
 
 #-----------------DATA INJECTION PIPELINE-----------------
 
@@ -62,13 +62,12 @@ def split_documents(docs: List[Document], chunk_size:int=1000,
     return splitter.split_documents(docs)
 
 #step-4:---create Embeddings and build vectorstore-----
-def build_vectorstore(chunks:List[Document],persist_directory:str=DB_dir):
-    if Path(persist_directory).exists():
-        shutil.rmtree(persist_directory)
-    vectorstore=Chroma.from_documents(documents=chunks, 
-                                      embedding=get_embeddings(),
-                                      persist_directory=persist_directory,
-                                      collection_name="career_coach_rag")
+def build_vectorstore(chunks: List[Document]):
+    vectorstore = Chroma.from_documents(
+        documents=chunks,
+        embedding=get_embeddings(),
+        collection_name="career_coach_rag"
+    )
     return vectorstore
 
 
