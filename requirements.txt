@@ -1,6 +1,5 @@
-streamlit==1.41.1
-python-dotenv==1.0.1
-
+streamlit
+python-dotenv
 langchain
 langchain-core
 langchain-community
@@ -8,12 +7,10 @@ langchain-text-splitters
 langchain-groq
 langchain-huggingface
 langchain-chroma
-
 chromadb
 sentence-transformers
 transformers
-
-pypdf==5.1.0
-python-docx==1.1.2
-docx2txt==0.8
-pandas==2.2.3
+pypdf
+python-docx
+docx2txt
+pandas
